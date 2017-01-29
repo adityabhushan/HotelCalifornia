@@ -7,3 +7,5 @@
 	height: 100px;
 	background: red;
 }
+
+<style>.active { color: red; font-weight: bold; }</style>
