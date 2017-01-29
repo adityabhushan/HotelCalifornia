@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html ng-app>
-<head>
-	<title>Hotel California</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="hotel.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
-	<script type="text/javascript" src="hotel.js"></script>
-</head>
-<body class='main'>
-<p>HI</p>
-<p class="text-right">hi</p>
+<html ng-app = 'room'>
 
+<head>
+    <title>Angular todo list</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="hotel.js"></script>
+</head>
+
+<body>
+   
+
+    <div ng-controller='RoomController as roomlist'>
+    <li ng-repeat='room in roomlist.rooms'>
+    <span>{{room.id}} belongs to {{room.name}}</span>    	
+    </li>
+    <form class="form-horizontal">
+            
+            <button class="btn" ng-click='roomlist.addRoom()'><i class="glyphicon glyphicon-plus"></i></button>
+        </form>
+    	
+    </div>
+    <ui-view></ui-view>
 </body>
 </html>
