@@ -1,0 +1,78 @@
+.main {
+	margin: 10%;
+}
+li {
+	list-style-type: none;
+}
+.roomlist {
+	width:250px;
+	height: 250px;
+	border: 1px solid #f1f1f1;
+	display: inline-block;
+	text-align: center;
+	font-size: 10em;
+}
+
+.todo {
+    width: 400px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -200px;
+    border: 1px solid #f1f1f1;
+    box-shadow: 2px 4px 2px rgba(0,0,0,0.26);
+}
+
+.todo h2 {
+    margin-top: 0;
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.todo li {
+    list-style-type: none;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 10px;
+}
+
+.todo li:last-child {
+    border-bottom: none;
+}
+
+.todo ul {
+    padding-left: 0;
+}
+
+.trash {
+    float: right;
+    padding-right: 10px;
+    display: none;
+}
+
+li:hover .trash {
+    display: inline;
+}
+
+.error {
+    color: red;
+}
+
+.add-block {
+    background-color: #f1f1f1;
+    height: 100%;
+    padding: 15px 15px 7px 15px;
+}
+
+.add-block .btn {
+    border-radius: 0;
+    float: right;
+}
+
+.add-block input {
+    height: 100%;
+    padding: 7px;
+    width: 320px;
+}
+

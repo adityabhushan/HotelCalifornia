@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+    <title>Angular todo list</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class='todo' ng-controller='TodoCtrl'>
+        <h2>Total items: {{getTotalTodos()}}</h2>
+        <ul>
+            <li ng-repeat='todo in todos'>
+                {{todo}}<span ng-click='removeItem($index)'><i class="trash glyphicon glyphicon-trash">  </i></span>
+            </li>
+        </ul>
+        <form class="add-block">
+            <input type="text" ng-model='addItem'>
+            <button class="btn btn-primary" ng-click='addTodo()'><i class="glyphicon glyphicon-plus"></i></button>
+            <p class='error'>{{errortext}}</p>
+        </form>
+    </div>
+</body>
+
+</html>
