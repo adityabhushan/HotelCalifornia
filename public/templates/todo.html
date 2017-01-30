@@ -1,5 +1,6 @@
 <div class='todo'>
-    <h2>Total items: {{getTotalTodos()}}</h2>
+    <h2>Todo list - Room : {{id}}</h2>
+
     <ul>
         <li ng-repeat='todo in todos'>
             {{todo}}<span ng-click='removeItem($index)'><i class="trash glyphicon glyphicon-trash">  </i></span>
