@@ -1,7 +1,7 @@
 (function() {
     angular.module('room')
 
-    .controller('hotelCtrl', ['$scope', 'roomid', function($scope, roomid) {
+    .controller('hotelCtrl', ['$scope', function($scope) {
     	
         $scope.rooms = [{ id: 1 }, { id: 2 }, { id: 3 }]
 

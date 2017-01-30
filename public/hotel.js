@@ -17,8 +17,4 @@
             })
 
     }])
-    .service('roomid', function (){
-        var roomid = this
-        roomid.room = 1
-    })
 })()
