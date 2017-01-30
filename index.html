@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Angular todo list</title>
+    <title>Hotel California</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script src="https://unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
     <!-- <script src="https://npmcdn.com/angular@latest/angular.js"></script>
@@ -13,20 +13,17 @@
     <script src="room.js"></script>
 </head>
 
-<body ng-app = 'room'>
-   
-
-    <!-- <div ng-controller='RoomController as roomlist'>
-    <li ng-repeat='room in roomlist.rooms'>
-    <span><a ui-sref={{room.id}}  ui-sref-active="active">belongs to {{room.name}}</a></span>    	
-    </li>
-    <form class="form-horizontal">
-            
-            <button class="btn" ng-click='roomlist.addRoom()'><i class="glyphicon glyphicon-plus"></i></button>
-        </form>
-    	
-    </div> -->
-    <a ui-sref='room'  ui-sref-active="active">belongs to</a>
+<body ng-app='room'>
+<header></header>
+    <div class='main' ng-controller='roomController'>
+        <button class="btn btn-primary" ng-click='addRoom()'><i class="glyphicon glyphicon-plus"></i></button>
+        <ul>
+            <li class='roomlist' ng-repeat='room in rooms'>
+                <span>{{room.id}} </span>
+            </li>
+        </ul>
+    </div>
     <ui-view></ui-view>
 </body>
+
 </html>

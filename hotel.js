@@ -1,31 +1,11 @@
-(function () {
-  var app = angular.module('room', ['ui.router'])
+(function() {
+    var app = angular.module('room', ['ui.router'])
 
-    // app.controller('RoomController', function () {
-    //   this.rooms = []
+    app.controller('roomController', function roomController($scope) {
+        $scope.rooms = [{ id: 1 }, { id: 2 }, { id: 3 }]
 
-    //   this.addRoom = function () {
-    //  	this.rooms.push({id: this.rooms.length + 1, name: 'Room No ' + (this.rooms.length + 1)})
-    //   }
-    // })
-
-  app.config(function ($stateProvider) {
-    var roomState = {
-      name: 'room',
-      url: '/room',
-            // component: 'myroom'
-
-      controller: function ($scope) {
-        $scope.greeting = 'hello'
-
-        $scope.toggleGreeting = function () {
-          $scope.greeting = ($scope.greeting == 'hello') ? 'whats up' : 'hello'
+        $scope.addRoom = function() {
+            $scope.rooms.push({ id: $scope.rooms.length + 1 })
         }
-      },
-      template: '<h3>{{greeting}} solar sytem!</h3>' +
-                '<button ng-click="toggleGreeting()">toggle greeting</button>'
-    }
-
-    $stateProvider.state(roomState)
-  })
+    })
 })()

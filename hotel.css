@@ -1,11 +1,14 @@
 .main {
 	margin: 10%;
 }
-
-.room {
-	width:100px;
-	height: 100px;
-	background: red;
+li {
+	list-style-type: none;
 }
-
-<style>.active { color: red; font-weight: bold; }</style>
+.roomlist {
+	width:250px;
+	height: 250px;
+	border: 1px solid #f1f1f1;
+	display: inline-block;
+	text-align: center;
+	font-size: 10em;
+}
