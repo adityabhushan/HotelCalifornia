@@ -2,10 +2,12 @@
     <button class="btn btn-primary" ng-click='addRoom()'><i class="glyphicon glyphicon-plus"></i></button>
     <ul>
         <li class='roomlist' ng-repeat='room in rooms'>
-        <div>
-        	<span>{{room.id}} </span>
-        </div>
-            
+            <a ui-sref="room({roomId:room.id})">
+                <div>
+                    <span>{{roomid.room=room.id}}</span>
+
+                </div>
+            </a>
         </li>
     </ul>
 </div>
