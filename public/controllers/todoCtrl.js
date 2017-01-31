@@ -4,10 +4,12 @@
     .controller('todoCtrl', ['$scope', '$stateParams', function($scope, $stateParams) {
         $scope.id = $stateParams.roomId
         if(!localStorage.getItem($scope.id)) {
-            localStorage.setItem($scope.id, JSON.stringify(['Clean this room', 'Set furniture']))            
+            $scope.todos = ['Clean this room', 'Set furniture']
+            localStorage.setItem($scope.id, JSON.stringify($scope.todos))
         } else {
             $scope.todos = JSON.parse(localStorage.getItem($scope.id))
         }
+
         $scope.addTodo = function() {
             $scope.errortext = ""
             if (!$scope.addItem) {

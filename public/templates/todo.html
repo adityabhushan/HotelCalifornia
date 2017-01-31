@@ -3,12 +3,12 @@
 
     <ul>
         <li ng-repeat='todo in todos'>
-            {{todo}}<span ng-click='removeItem($index)'><i class="trash glyphicon glyphicon-trash">  </i></span>
+            {{todo}}<span class="trash glyphicon glyphicon-trash" ng-click='removeItem($index)'></span>
         </li>
     </ul>
     <form class="add-block">
         <input type="text" ng-model='addItem'>
-        <button class="btn btn-success" ng-click='addTodo()'><i class="glyphicon glyphicon-plus"></i></button>
+        <button class="btn btn-success glyphicon glyphicon-plus" ng-click='addTodo()'></button>
         <p class='error'>{{errortext}}</p>
     </form>
 </div>

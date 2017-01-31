@@ -1,6 +1,9 @@
 .navbar-default .navbar-nav>li>a {
     color: #fff;
     background-color: #449d44;
+    border-radius: 0;
+    font-size: 1.1em;
+    font-weight:600;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -25,12 +28,29 @@ li {
 }
 
 .roomlist {
-	width:250px;
-	height: 250px;
-	border: 1px solid #f1f1f1;
+	width:150px;
+	height: 150px;
+	border: 2px solid #000;
 	display: inline-block;
 	text-align: center;
-	font-size: 10em;
+	font-size: 7em;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-bottom:15px;
+}
+
+@media(max-width: 767px) {
+.roomlist {
+    width:50px;
+    height: 50px;
+    border: 1px solid #f1f1f1;
+    display: inline-block;
+    text-align: center;
+    font-size: 10em;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-bottom:10px;
+}    
 }
 
 .todo {
@@ -98,5 +118,6 @@ li:hover .trash {
 
 a:hover, a:visited, a:link, a:active
 {
+    color: #f1f1f1;
     text-decoration: none;
 }
