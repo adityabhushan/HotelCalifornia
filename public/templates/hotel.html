@@ -1,16 +1,12 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">Hotel California</a>
+<header class="navbar-custom col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="brand col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <a href="/">Hotel California</a>
     </div>
-
-    <ul class="nav navbar-nav navbar-right">         
-      <li><a class="btn btn-success" ng-click='addRoom()'><i class="glyphicon glyphicon-plus"></i> Add Room</a></li>
-    </ul>
-  </div>
-</nav>
-
-<div class='main'>
+    <div class="add-btn col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <a class="add-room  btn btn-success" ng-click='addRoom()'><span class="glyphicon glyphicon-plus"></span> Add Room</a>
+    </div>
+</header>
+<section class='main col-xs-12 col-sm-12 col-md-12 col-lg-12'>
     <ul>
         <li class='roomlist' ng-repeat='room in rooms'>
             <a ui-sref="room({roomId:room.id})">
@@ -20,4 +16,4 @@
             </a>
         </li>
     </ul>
-</div>
+</section>

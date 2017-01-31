@@ -3,6 +3,8 @@
 
     .controller('todoCtrl', ['$scope', '$stateParams', function($scope, $stateParams) {
         $scope.id = $stateParams.roomId
+
+        //Store each room todo with roomid in localStorage
         if(!localStorage.getItem($scope.id)) {
             $scope.todos = ['Clean this room', 'Set furniture']
             localStorage.setItem($scope.id, JSON.stringify($scope.todos))
@@ -23,9 +25,9 @@
             }
         }
 
-        $scope.removeItem = function(x) {
+        $scope.removeItem = function(todoid) {
             $scope.errortext = ""
-            $scope.todos.splice(x, 1)
+            $scope.todos.splice(todoid, 1)
             localStorage.setItem($scope.id, JSON.stringify($scope.todos))
         }
 
